@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import datetime
-
 def file_date(filename):
     #create the file in current directory
     os.mkdir(filename)
@@ -12,5 +11,5 @@ def file_date(filename):
     #Return only the date portion
     return ("{}".format(only))
 
-print(file_date("newfile.txt"))
+print(file_date("newfiles"))
 #should be todays date in the format of yyyy-mm-dd
