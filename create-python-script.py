@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 def create_python_script(filename):
-    comments = "#!/usr/bin/env python3"
+    shebang = "#!/usr/bin/env python3"
     
     with open(filename, "w") as file:
-        filesize = file.write(comments)
+        filesize = file.write(shebang)
+        file.write("\n#new file created")
         
         return(filesize)
 
