@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # New file created
 import psutil
-import emails
+#import emails
 import os
 import sys
 import shutil
@@ -57,18 +57,19 @@ def check_localhost():
 
 
 
-def main(argv):
-    sender = "automation@example.com"
-    receiver = "{}@example.com".format(os.environ.get('USER'))
+def main():
+    #sender = "automation@example.com"
+    #receiver = "{}@example.com".format(os.environ.get('USER'))
+
     error_message = cpu_check(), disk_space(), memory_space(), check_localhost()
 
     subject = error_message
     print(subject)
-    body = "Please check your system and resolve the isssue as soon as possible"
-    message = emails.generate_email_without_attachment(
-        sender=sender, recipient=receiver, subject=subject, body=body)
-    emails.send(message)
+    #body = "Please check your system and resolve the isssue as soon as possible"
+    #message = emails.generate_email_without_attachment(
+        #sender=sender, recipient=receiver, subject=subject, body=body)
+    #emails.send(message)
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    main()
